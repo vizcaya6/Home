@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Formulario Registro</title>
+
+
+</head>
+<body>
+  <section class="form-register">
+    <h4>Formulario Registro</h4>
+    <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre" required>
+    <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido" required>
+    <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo" required>
+    <div class="form-group">
+        <label class="gen-label" for="gener">GENERO</label>
+        <select class="gen-select" name="" id="gener">
+            <option value="man">Hombre</option>
+            <option value="women">Mujer</option>
+        </select>
+    </div>
+    <div class="form-group">
+      <label class="doc-label" for="tipDocument">Tipo de Documento</label>
+      <select class="doc-select" name="" id="tipDocument">
+          <option value="CC">CC</option>
+          <option value="CE">CE</option>
+          <option value="TI">TI</option>
+          <option value="PAS">PS</option>
+      </select>
+    </div>
+    <input class="controls" type="text" name="documento" id="documento" placeholder="Ingrese su Documento" required>
+    <input class="controls" type="date" name="date" id="date" placeholder="Fecha de nacimiento" required>
+    <div class="checks-container">
+        <input class="checks" type="checkbox" name="noti" id="notificaciones">
+        <label for="noti">Deseo recibir información sobre novedades y ofertas</label>
+    </div>
+    <div class="checks-container">
+        <input class="checks" type="checkbox" name="leyes" id="acepleyes">
+        <label for="leyes">Declaro haber leído y aceptado las condiciones generales del programa</label>
+    </div>
+    <p><a href="#">Terminos y Condiciones</a></p>
+    <button class="Registrar" onclick="guardarDatos()">Registrar</button>
+  </section>
+  <section class="Registros">
+    <h2>Registros</h2>
+    <table id="tablaDatos">
+      <thead>
+          <tr>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Correo</th>
+              <th>Género</th>
+              <th>Tipo Documento</th>
+              <th>N° Documento</th>
+              <th>Fecha de nacimiento</th>
+          </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+    <script>
+      function guardarDatos() {
+          // Obtener los valores de los campos del formulario
+          var nombre = document.getElementById("nombres").value;
+          var apellido = document.getElementById("apellidos").value;
+          var correo = document.getElementById("correo").value;
+          var genero =document.getElementById("gener").value;
+          var TipDocumento=document.getElementById("tipDocument").value;
+          var documento=document.getElementById("documento").value;
+          var fecha=document.getElementById("date").value;
+
+          // Crear una nueva fila en la tabla y agregar los datos
+          var tabla = document.getElementById("tablaDatos").getElementsByTagName('tbody')[0];
+          var fila = tabla.insertRow(tabla.rows.length);
+          var celdaNombre = fila.insertCell(0);
+          var celdaApellido = fila.insertCell(1);
+          var celdaCorreo = fila.insertCell(2);
+          var celdaGenero = fila.insertCell(3);
+          var celdaTipDocumento=fila.insertCell(4);
+          var celdadocumento=fila.insertCell(5);
+          var celdafecha=fila.insertCell(6);
+
+
+          celdaNombre.innerHTML = nombre;
+          celdaApellido.innerHTML = apellido;
+          celdaCorreo.innerHTML = correo;
+          celdaGenero.innerHTML = genero;
+          celdaTipDocumento.innerHTML = TipDocumento;
+          celdadocumento.innerHTML = documento;
+          celdafecha.innerHTML = fecha;
+
+          // Limpiar los campos del formulario
+          document.getElementById("nombres").value = "";
+          document.getElementById("apellidos").value = "";
+          document.getElementById("correo").value = "";
+          document.getElementById("gener").value = "";
+          document.getElementById("tipDocument").value = "";
+          document.getElementById("documento").value = "";
+          document.getElementById("date").value = "";
+      }
+  </script>
+  </section>
+</body>
+</html>

@@ -1,0 +1,150 @@
+body {
+  background-image: url('fondito.jpg');
+  background-repeat: no-repeat; 
+  background-size: cover; 
+}
+
+h2 {
+  text-align: center;
+  font-family: 'calibri';
+  color: white;
+}
+
+/* Estilos para la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ccc;
+  font-family: 'calibri';
+  border-radius: 10%;
+}
+
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+/* Estilos para las celdas del encabezado */
+th {
+  background-color: rgb(240, 233, 233);
+  color: rgb(104, 99, 99);
+}
+
+.form-register {
+  width: 400px;
+  background: #308353;
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 4px;
+  font-family: 'calibri';
+  color: rgb(240, 233, 233);
+  box-shadow: 7px 13px 37px #2da09a;
+}
+
+.form-register h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.form-register h6 {
+  font-size: 20px;
+  margin: 0;
+}
+.controls {
+  width: 100%;
+  background: #dae4dc;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #d9dce2;
+  font-family: 'calibri';
+  font-size: 18px;
+  color: rgb(148, 146, 146);
+}
+
+.form-register p {
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.form-register a {
+  color: rgb(223, 215, 215);
+  text-decoration: none;
+}
+
+
+
+.form-register .checks-container {
+  margin-bottom: 10px; 
+  display: flex; 
+  align-items: center;
+}
+
+.checks {
+  margin-right: 5px; 
+}
+
+label {
+  margin: 0; 
+}
+
+.form-group {
+  display: flex; 
+  align-items: center; 
+  margin-bottom: 10px;
+  background-color: #dae4dc; 
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #d9dce2;
+  width: 100%;
+}
+
+.gen-label {
+  margin-right: 10px; 
+  width: 100px;
+  color: #808286;
+}
+
+.gen-select {
+  flex: 1;
+  margin-left: 150px;
+  background-color: transparent;
+  font-size: 16px;
+  border: none;
+  font-family: 'calibri';
+}
+
+.doc-label {
+  margin-right: 10px; 
+  width: 100px;
+  color: #808286;
+}
+
+.doc-select {
+  flex: 1;
+  margin-left: 150px;
+  background-color: transparent;
+  font-size: 16px;
+  border: none;
+  font-family: 'calibri';
+}
+
+.Registrar{
+  width: 100%;
+  background: #40c51f;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  font-size: 16px;
+}
+
+.Registrar:hover{
+  background-color: #ced0d3;
+  cursor: pointer;
+}
